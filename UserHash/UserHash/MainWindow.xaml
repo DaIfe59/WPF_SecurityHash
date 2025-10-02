@@ -5,8 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UserHash"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="User Security Manager" Height="450" Width="800">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Change Password" Name="MenuChangePassword"/>
+                <Separator/>
+                <MenuItem Header="E_xit" Name="MenuExit"/>
+            </MenuItem>
+            <MenuItem Header="_Admin" Name="MenuAdmin">
+                <MenuItem Header="_Manage Users" Name="MenuManageUsers"/>
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem Header="_About" Name="MenuAbout"/>
+            </MenuItem>
+        </Menu>
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem>
+                <TextBlock Name="StatusText" Text="Ready"/>
+            </StatusBarItem>
+        </StatusBar>
+        <Grid>
+            <StackPanel Margin="16">
+                <TextBlock Text="Welcome" FontSize="20"/>
+                <TextBlock Text="Use the menu to manage users or change password." Margin="0,8,0,0"/>
+            </StackPanel>
+        </Grid>
+    </DockPanel>
 </Window>

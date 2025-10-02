@@ -1,0 +1,32 @@
+<Window x:Class="UserHash.ManageUsersWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Manage Users" Height="420" Width="600" WindowStartupLocation="CenterOwner">
+    <DockPanel>
+        <ToolBar DockPanel.Dock="Top">
+            <Button Name="AddUserBtn" Content="Добавить"/>
+            <Button Name="BlockUserBtn" Content="Блокировать" Margin="8,0,0,0"/>
+            <ToggleButton Name="TogglePolicyBtn" Content="Ограничения пароля" Margin="8,0,0,0"/>
+        </ToolBar>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <DataGrid Name="UsersGrid" Grid.Row="0" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Имя" Binding="{Binding UserName}" Width="*"/>
+                    <DataGridCheckBoxColumn Header="Заблокирован" Binding="{Binding IsBlocked}" Width="120"/>
+                    <DataGridCheckBoxColumn Header="Ограничения" Binding="{Binding EnforcePasswordConstraints}" Width="120"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <StatusBar Grid.Row="1">
+                <StatusBarItem>
+                    <TextBlock Name="InfoText"/>
+                </StatusBarItem>
+            </StatusBar>
+        </Grid>
+    </DockPanel>
+</Window>
+
+

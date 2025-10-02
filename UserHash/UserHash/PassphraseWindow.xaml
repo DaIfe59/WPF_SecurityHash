@@ -1,0 +1,23 @@
+<Window x:Class="UserHash.PassphraseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Парольная фраза" Height="180" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid Margin="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Введите парольную фразу для расшифровки файла:" Margin="0,0,0,8"/>
+        <PasswordBox Grid.Row="1" Name="PassphraseBox" Margin="0,0,0,8"/>
+        <TextBlock Grid.Row="2" Name="InfoText" Foreground="DarkRed" Margin="0,0,0,8"/>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Name="OkButton" Width="100" Margin="0,0,8,0" Content="OK"/>
+            <Button Name="CancelButton" Width="100" Content="Отмена"/>
+        </StackPanel>
+    </Grid>
+</Window>
+
