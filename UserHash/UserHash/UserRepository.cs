@@ -48,7 +48,10 @@ public class UserRepository
                     }
                 }
             };
-            Save(store);
+            if (!Save(store))
+            {
+                return null; // Failed to create encrypted file
+            }
             return store;
         }
 

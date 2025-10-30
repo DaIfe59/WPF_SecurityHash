@@ -16,9 +16,6 @@
             <MenuItem Header="_Admin" Name="MenuAdmin">
                 <MenuItem Header="_Manage Users" Name="MenuManageUsers"/>
             </MenuItem>
-            <MenuItem Header="_Help">
-                <MenuItem Header="_About" Name="MenuAbout"/>
-            </MenuItem>
         </Menu>
         <StatusBar DockPanel.Dock="Bottom">
             <StatusBarItem>

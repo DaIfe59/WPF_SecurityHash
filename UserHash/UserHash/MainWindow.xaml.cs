@@ -23,7 +23,6 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-        MenuAbout.Click += (_, __) => ShowAbout();
         MenuExit.Click += (_, __) => Application.Current.Shutdown();
         MenuChangePassword.Click += (_, __) => OnChangePassword();
         MenuManageUsers.Click += (_, __) => OnManageUsers();
@@ -72,15 +71,6 @@ public partial class MainWindow : Window
             }
             MessageBox.Show("Пароль успешно изменен.", "Смена пароля", MessageBoxButton.OK, MessageBoxImage.Information);
         }
-    }
-
-    private void ShowAbout()
-    {
-        MessageBox.Show(
-            "Автор: <укажите ФИО>\nИндивидуальное задание: Режимы ADMIN/пользователь, управление пользователями, ограничения паролей.",
-            "О программе",
-            MessageBoxButton.OK,
-            MessageBoxImage.Information);
     }
 
     private void OnManageUsers()

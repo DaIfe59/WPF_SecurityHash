@@ -15,6 +15,7 @@
         <TextBlock Grid.Row="2" Name="InfoText" Foreground="DarkRed" Margin="0,0,0,8"/>
 
         <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Name="ResetButton" Width="80" Margin="0,0,8,0" Content="Сброс"/>
             <Button Name="OkButton" Width="100" Margin="0,0,8,0" Content="OK"/>
             <Button Name="CancelButton" Width="100" Content="Отмена"/>
         </StackPanel>
